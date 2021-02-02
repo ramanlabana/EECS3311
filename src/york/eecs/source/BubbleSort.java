@@ -43,16 +43,7 @@ public class BubbleSort implements MapSort<String, Integer>{
 	/**
 	 *  TODO: Implement sorting the maps by values with bubble sorting algorithm.
 	 *  	  This method returns the corresponding key list.
-	 *//*int n = arr.length; 
-     for (int i = 0; i < n-1; i++) 
-         for (int j = 0; j < n-i-1; j++) 
-             if (arr[j] > arr[j+1]) 
-             { 
-                 // swap arr[j+1] and arr[j] 
-                 int temp = arr[j]; 
-                 arr[j] = arr[j+1]; 
-                 arr[j+1] = temp; 
-             } */
+	 */
 	   ArrayList<String> listkey=new ArrayList<String>();
 	   ArrayList<Integer> listvalue=new ArrayList<Integer>();
 	   listkey.addAll(map.keySet());
@@ -65,7 +56,7 @@ public class BubbleSort implements MapSort<String, Integer>{
 	   {
 		   for(int j=0; j<n-i-1; j++)
 		   {
-			   if(listvalue.get(j+1)< listvalue.get(j))
+			   if(listvalue.get(j+1)<= listvalue.get(j))
 			   {
 				   int temp= listvalue.get(j);
 				   listvalue.set(j, listvalue.get(j+1));
